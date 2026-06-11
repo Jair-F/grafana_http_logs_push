@@ -3,8 +3,8 @@
   "kind": "Dashboard",
   "metadata": {
     "name": "adsx4g9",
-    "generation": 2,
-    "creationTimestamp": "2026-06-11T20:03:34Z",
+    "generation": 12,
+    "creationTimestamp": "2026-06-11T20:10:53Z",
     "labels": {},
     "annotations": {}
   },
@@ -95,6 +95,147 @@
           },
           "transparent": true
         }
+      },
+      "panel-2": {
+        "kind": "Panel",
+        "spec": {
+          "id": 2,
+          "title": "",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "canvas",
+            "version": "13.0.2",
+            "spec": {
+              "options": {
+                "inlineEditing": false,
+                "panZoom": false,
+                "root": {
+                  "background": {
+                    "color": {
+                      "fixed": "transparent"
+                    },
+                    "image": {
+                      "fixed": "",
+                      "mode": "fixed"
+                    },
+                    "size": "original"
+                  },
+                  "border": {
+                    "color": {
+                      "fixed": "dark-green"
+                    },
+                    "radius": 0,
+                    "width": 0
+                  },
+                  "constraint": {
+                    "horizontal": "left",
+                    "vertical": "top"
+                  },
+                  "elements": [
+                    {
+                      "actions": [],
+                      "background": {
+                        "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        },
+                        "radius": 60,
+                        "width": 0
+                      },
+                      "config": {
+                        "align": "center",
+                        "api": {
+                          "contentType": "text/plain",
+                          "endpoint": "http://localhost:3030/shutdown",
+                          "headerParams": [],
+                          "method": "POST",
+                          "queryParams": [],
+                          "successMessage": "shutting down"
+                        },
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 14,
+                        "style": {
+                          "variant": "primary"
+                        },
+                        "text": {
+                          "fixed": "shutdown",
+                          "mode": "fixed"
+                        }
+                      },
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "name": "shutdown",
+                      "placement": {
+                        "height": 47,
+                        "left": 8,
+                        "rotation": 0,
+                        "top": 9,
+                        "width": 104
+                      },
+                      "type": "button"
+                    }
+                  ],
+                  "name": "Element 1781208663696",
+                  "placement": {
+                    "height": 100,
+                    "left": 0,
+                    "rotation": 0,
+                    "top": 0,
+                    "width": 100
+                  },
+                  "type": "frame"
+                },
+                "showAdvancedTypes": false,
+                "tooltip": {
+                  "disableForOneClick": false,
+                  "mode": "none"
+                },
+                "zoomToContent": false
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "fixed",
+                    "fixedColor": "dark-red"
+                  }
+                },
+                "overrides": []
+              }
+            }
+          },
+          "transparent": true
+        }
       }
     },
     "layout": {
@@ -106,11 +247,24 @@
             "spec": {
               "x": 0,
               "y": 0,
-              "width": 12,
-              "height": 9,
+              "width": 11,
+              "height": 10,
               "element": {
                 "kind": "ElementReference",
                 "name": "panel-1"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 0,
+              "y": 10,
+              "width": 2,
+              "height": 2,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-2"
               }
             }
           }
@@ -123,7 +277,7 @@
     "tags": [],
     "timeSettings": {
       "timezone": "browser",
-      "from": "now-6h",
+      "from": "now",
       "to": "now",
       "autoRefresh": "",
       "autoRefreshIntervals": [
